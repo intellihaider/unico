@@ -5,6 +5,7 @@ import grails.converters.JSON
 class GCDController {
 
     def GCDService
+    def rabbitTemplate
 
     def list() {
         List<Item> item=Item.findAll()
@@ -31,4 +32,12 @@ class GCDController {
             render "failure"
         }
     }
+
+    def test(){
+
+        rabbitTemplate.convertAndSend('gcdQueue',[val1:"1",val2:"2"])
+
+    }
+
+
 }

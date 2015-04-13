@@ -7,6 +7,9 @@ Unico Programming Assignment user document :
 
  http://{domain}/Unico/GCD/push?i1=1&i2=2
 
+Note:<Please install RabitMQ-server before using push command>
+
+
 2.public List<Integer>list():
 
 use:
@@ -33,3 +36,4 @@ http://{domain}/Unico/GCD/gcdList
 use:
 
 http://{domain}/Unico/GCD/gcdSum
+

@@ -5,6 +5,8 @@ import grails.transaction.Transactional
 @Transactional
 class GCDService {
 
+    def rabbitTemplate
+
     GCD gcd() {
         Item item=Item.last()
         GCD gcd=null
@@ -38,12 +40,13 @@ class GCDService {
     }
 
     boolean push(int i1,int i2){
-        Item item=new Item(i1: i1,i2: i2)
-        if(item.validate()){
-            item.save()
+        try {
+            rabbitTemplate.convertAndSend('gcdQueue', [i1: i1, i2: i2])
             return true
         }
-        return false
+        catch (Exception e){
+            return false
+        }
     }
 
 }
