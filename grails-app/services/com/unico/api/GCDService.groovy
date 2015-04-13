@@ -34,12 +34,11 @@ class GCDService {
             GCD gcd = new GCD(i1: item.i1, i2: item.i2, gcd: calculateGcd(item.i1, item.i2))
             gcds.gcds.add(gcd)
         }
-        println(gcds)
         return gcds
     }
 
     int gcdSum(){
-        return gcdList().gcd.sum()
+        return gcdList().gcds.gcd.sum()
     }
 
     boolean push(int i1,int i2){

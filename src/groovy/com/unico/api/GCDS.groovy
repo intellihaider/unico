@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement
 @XmlRootElement(name = "GCDS")
 class GCDS{
 
-    @XmlElement
+    @XmlElement(name = "gcdElement")
     List<GCD> gcds =[];
 
 }

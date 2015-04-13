@@ -33,11 +33,4 @@ class GCDController {
         }
     }
 
-    def test(){
-
-        rabbitTemplate.convertAndSend('gcdQueue',[val1:"1",val2:"2"])
-
-    }
-
-
 }
