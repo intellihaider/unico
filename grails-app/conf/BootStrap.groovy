@@ -1,3 +1,5 @@
+import com.unico.api.GCD
+import com.unico.api.GCDS
 import com.unico.api.Item
 import grails.converters.JSON
 
@@ -17,6 +19,24 @@ class BootStrap {
                 }
                 return item
             }
+
+            JSON.registerObjectMarshaller(GCD){
+                Map item=[:]
+                ['gcd','i1','i2'].each {name->
+                    item.put(name,it[name])
+                }
+                return item
+            }
+
+            JSON.registerObjectMarshaller(GCDS){
+                Map item=[:]
+                ['gcds'].each {name->
+                    item.put(name,it[name])
+                }
+                return item
+            }
+
+
         }
 
 
