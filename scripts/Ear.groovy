@@ -27,10 +27,9 @@ target(generateApplicationXml:"Generates an application.xml file") {
     appXml = "${projectTargetDir}/application.xml"
     new File(appXml).write """\
 <?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/ 2001/XMLSchema-instance"
-       xsi:schemaLocation="http:// java.sun.com/xml/ns/j2ee
-           http://java.sun.com/xml/ns/j2ee/ application_1_4.xsd"
-       version="1.4">
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  version="6" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd">
+
 <display-name>${grailsAppName}</display-name>
 <module>
     <web>
