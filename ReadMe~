@@ -1,9 +1,6 @@
 Unico Programming Assignment user document :
 
 
-
-JSON:
-
 1.public String push(int i1,int i2):
 
  use:
@@ -40,10 +37,3 @@ use:
 
 http://{domain}/Unico/GCD/gcdSum
 
-
-
-
-Soap:
-
-WSDL:
-http://localhost:8080/Unico/services/GCD?WSDL

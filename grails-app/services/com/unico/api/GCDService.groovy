@@ -5,6 +5,8 @@ import grails.transaction.Transactional
 @Transactional
 class GCDService {
 
+    static expose = ['cxf']
+
     def rabbitTemplate
 
     GCD gcd() {
@@ -25,14 +27,15 @@ class GCDService {
         return calculateGcd(i2,i1%i2)
     }
 
-    List<GCD> gcdList(){
+    GCDS gcdList(){
         List<Item> items=Item.findAll()
-        List<GCD> gcdList=[]
+        GCDS gcds= new GCDS();
         items.each {Item item->
             GCD gcd = new GCD(i1: item.i1, i2: item.i2, gcd: calculateGcd(item.i1, item.i2))
-            gcdList.add(gcd)
+            gcds.gcds.add(gcd)
         }
-        return gcdList
+        println(gcds)
+        return gcds
     }
 
     int gcdSum(){

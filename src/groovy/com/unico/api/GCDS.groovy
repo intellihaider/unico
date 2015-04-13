@@ -8,18 +8,15 @@ import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlRootElement
 
 /**
- * Created by haiderali on 11/4/15.
+ * Created by haiderali on 13/4/15.
  */
-
 @Validateable
-@XmlAccessorType(XmlAccessType.NONE)
 
-@XmlRootElement(name = "GCD")
-class GCD{
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement(name = "GCDS")
+class GCDS{
+
     @XmlElement
-    Integer i1;
-    @XmlElement
-    Integer i2;
-    @XmlElement
-    Integer gcd;
+    List<GCD> gcds =[];
+
 }
