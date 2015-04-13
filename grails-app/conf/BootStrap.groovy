@@ -1,6 +1,7 @@
 import com.unico.api.GCD
 import com.unico.api.GCDS
 import com.unico.api.Item
+import com.unico.api.Items
 import grails.converters.JSON
 
 class BootStrap {
