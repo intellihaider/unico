@@ -34,7 +34,7 @@ target(generateApplicationXml:"Generates an application.xml file") {
 <module>
     <web>
         <web-uri>${warDest.name}</web-uri>
-        <context-root>${contextRoot}</context-root>
+        <context-root>${grailsAppName}</context-root>
     </web>
  </module>
 </application>

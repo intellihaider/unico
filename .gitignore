@@ -11,3 +11,4 @@ logs/
 out/
 stacktrace.log
 grails-app/conf/LocalConfig.groovy
+plugins/
